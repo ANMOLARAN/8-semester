@@ -22,7 +22,7 @@ import { useStateValue } from "../context/stateProvider";
 //   saveNewArtist,
 //   saveNewSong,
 // } from "../api";
-import { actionType } from "../Context/reducer";
+import { actionType } from "../context/reducer";
 import { filterByLanguage, filters } from "../utils/supportfunctions";
 import { IoMusicalNote } from "react-icons/io5";
 import { FilterButtons } from ".";

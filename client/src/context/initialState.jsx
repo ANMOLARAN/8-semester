@@ -10,5 +10,6 @@ export const initialState={
     albumFilter:null,
     alertType:null,
     isSongPlaying:false,
-    songIndex:0
+    songIndex:0,
+    searchTerm:""
 }

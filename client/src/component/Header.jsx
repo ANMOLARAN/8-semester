@@ -4,10 +4,9 @@ import {Logo} from '../assests/img';
 import { isActiveStyles,isNotActiveStyles } from '../utils/styles';
 import {FaCrown} from 'react-icons/fa'
 import { useStateValue } from '../context/stateProvider';
-import { getAuth } from 'firebase/auth';
+import { browserSessionPersistence, getAuth, setPersistence, signInWithEmailAndPassword } from 'firebase/auth';
 import { app } from '../config/firebase.config';
 import { motion } from 'framer-motion';
-import {HomePage} from '.';
 function Header() {
   const [{user},dispatch]=useStateValue();
   const [isMenu,setIsMenu]=useState(false);
@@ -33,10 +32,10 @@ function Header() {
           </ul>
          
           {/* <Routes>
-        <Route path='/main/home' element={<HomePage/>}/>
-        <Route path='/music' element={<DashboardUsers/>}/>
+        
+        <Route path='/userHome' element={<UserHome/>}/>
         <Route path='/premium' element={<DashboardSongs/>}/>
-        <Route path='/contact' element={<DashBoardNewSong/>}/>
+        <Route path='/contact' element={<DashBoardNewSong/>}/> 
       </Routes> */}
      
           
@@ -74,6 +73,7 @@ function Header() {
             </motion.div>
           )}
           </div>
+          
     </header>
 
    

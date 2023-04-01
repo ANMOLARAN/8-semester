@@ -2,10 +2,10 @@
 import './App.css'
 import React, {useEffect,useState} from 'react';
 import { Route, Routes, useNavigate } from 'react-router-dom'
-import { Dashboard, Home, Login, MusicPlayer } from './component'
+import { Dashboard, Home, Login, MusicPlayer, UserProfile} from './component'
 
 import {app} from './config/firebase.config'
-import {getAuth} from 'firebase/auth';
+import {browserSessionPersistence, getAuth, setPersistence, signInWithEmailAndPassword} from 'firebase/auth';
 
 import {AnimatePresence,motion} from "framer-motion";
 import { validateUser } from './api'
@@ -23,6 +23,8 @@ function App() {
   const [auth,setAuth]=useState(false || window.localStorage.getItem('auth')===true);
 
   useEffect(()=>{
+
+
   firebaseAuth.onAuthStateChanged((userCred)=>{
     if(userCred){
       userCred.getIdToken().then((token)=>{
@@ -44,6 +46,9 @@ function App() {
       navigate('/login')
     }
   })
+
+
+ 
   },[])
   return (
     <AnimatePresence mode="wait">
@@ -52,6 +57,7 @@ function App() {
       <Route path='/login' element={<Login setAuth={setAuth}/>} />
       <Route path='/*' element={<Home/>} />
       <Route path='/dashboard/*' element={<Dashboard/>}/>
+      <Route path='/userProfile' element={<UserProfile/>}/>
      </Routes>
 
      

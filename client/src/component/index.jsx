@@ -17,6 +17,7 @@ export {default as Alert} from './Alert'
 
 export {default as MusicPlayer} from './MusicPlayer'
 
-//front view
 
-export {default as HomePage} from './User/HomePage'
+//home for user
+export {default as UserProfile} from './UserProfile'
+export {default as Filter} from './Filter'
