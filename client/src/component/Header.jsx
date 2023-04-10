@@ -31,12 +31,7 @@ function Header() {
             <li className='mx-5 text-lg'><NavLink to={'/contact'} className={({isActive})=>isActive?isActiveStyles:isNotActiveStyles}>Contact Us</NavLink></li>
           </ul>
          
-          {/* <Routes>
-        
-        <Route path='/userHome' element={<UserHome/>}/>
-        <Route path='/premium' element={<DashboardSongs/>}/>
-        <Route path='/contact' element={<DashBoardNewSong/>}/> 
-      </Routes> */}
+         
      
           
           <div

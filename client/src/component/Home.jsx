@@ -13,12 +13,12 @@ const Home = () => {
     {
       searchTerm,
       isSongPlaying,
-      songIndex,
       allSongs,
       artistFilter,
       filterTerm,
       albumFilter,
       languageFilter,
+      songIndex
     },
     dispatch,
   ] = useStateValue();
@@ -115,12 +115,13 @@ const Home = () => {
 };
 
 export const HomeSongContainer = ({ musics }) => {
-  const [{ isSongPlaying, song }, dispatch] = useStateValue();
+  const [{ isSongPlaying, songIndex }, dispatch] = useStateValue();
 
   const addSongToContext = (index) => {
+    console.log("home",index);
     if (!isSongPlaying) {
       dispatch({
-        type: actionType.SET_SONG_PLAYING,
+        type: actionType.SET_ISSONG_PLAYING,
         isSongPlaying: true,
       });
     }
