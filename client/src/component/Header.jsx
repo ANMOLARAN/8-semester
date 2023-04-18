@@ -20,13 +20,13 @@ function Header() {
     navigate('/login',{replace:true});
   }
   return (
-    <header className='flex items-center w-full p-4 md:py-2 md:px-6'>
+    <header className='flex items-center w-full p-4 md:py-2 md:px-6 bg-primary'>
       <NavLink to={'/'}>
           <img src={Logo} alt='Logo' className='w-16'/>
           </NavLink>
           <ul className='flex items-center justiy-center ml-7'>
             <li className='mx-5 text-lg'><NavLink to={'/home'} className={({isActive})=>isActive?isActiveStyles:isNotActiveStyles}>Home</NavLink></li>
-            <li className='mx-5 text-lg'><NavLink to={'/musics'} className={({isActive})=>isActive?isActiveStyles:isNotActiveStyles}>Musics</NavLink></li>
+            <li className='mx-5 text-lg'><NavLink to={'/chat'} className={({isActive})=>isActive?isActiveStyles:isNotActiveStyles}>Group Chat</NavLink></li>
             <li className='mx-5 text-lg'><NavLink to={'/premium'} className={({isActive})=>isActive?isActiveStyles:isNotActiveStyles}>Premium</NavLink></li>
             <li className='mx-5 text-lg'><NavLink to={'/contact'} className={({isActive})=>isActive?isActiveStyles:isNotActiveStyles}>Contact Us</NavLink></li>
           </ul>
@@ -52,7 +52,7 @@ function Header() {
               <NavLink to={'/userProfile'}>
                 <p className="text-base text-textColor hover:font-semibold duration-150 transition-all ease-in-out">Profile</p>
                 </NavLink>
-                <p className="text-base text-textColor hover:font-semibold duration-150 transition-all ease-in-out">My Favourites</p>
+                {/* <p className="text-base text-textColor hover:font-semibold duration-150 transition-all ease-in-out">My Favourites</p> */}
                 <hr/>
                {
                 user?.user?.role==='admin' && (

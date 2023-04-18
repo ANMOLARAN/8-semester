@@ -135,3 +135,28 @@ export const deleteArtistById=async(id)=>{
         return null;
     }
 }
+
+//for chat message all api
+
+//to enter new chat
+export const saveNewMessage=async(data)=>{
+    try{
+        const res=await axios.post(`${baseURL}api/chats/save`,{...data});
+        return res.data;
+    }
+    catch(error){
+        console.log("Not able to save new Message",error)
+    }
+}
+
+//to get all chat
+export const getAllMessage=async()=>{
+    try{
+        const res=await axios.get(`${baseURL}api/chats/getAll`);
+        return res.data;
+    }
+    catch(error){
+        console.log("Not able to get all Message",error)
+    }
+}
+

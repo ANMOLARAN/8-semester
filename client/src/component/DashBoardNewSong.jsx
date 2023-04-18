@@ -103,16 +103,7 @@ function DashBoardNewSong() {
 //to save song
  const saveSong=()=>{
   if(!songImageCover || !audioImageCover){
-    // dispatch({
-    //   type:actionType.SET_ALERT_TYPE,
-    //   alertType:"danger"
-    // });
-    // setInterval(()=>{
-    //   dispatch({
-    //     type:actionType.SET_ALERT_TYPE,
-    //     alertType:null
-    //   });
-    // },4000)
+    alert("Please fill the data properly")
   }else{
     setIsAudioLoading(true);
     setIsImageLoading(true);
@@ -151,16 +142,7 @@ function DashBoardNewSong() {
  //to save artist
  const saveArtist=()=>{
   if(!artistImageCover || !artistName || !twitter || !instagram){
-    // dispatch({
-    //   type:actionType.SET_ALERT_TYPE,
-    //   alertType:"danger"
-    // });
-    // setInterval(()=>{
-    //   dispatch({
-    //     type:actionType.SET_ALERT_TYPE,
-    //     alertType:null
-    //   });
-    // },4000)
+   alert("please fill the data properly");
   }else{
     setIsArtistLoading(true);
     const data={
@@ -200,6 +182,7 @@ function DashBoardNewSong() {
     //     alertType:null
     //   });
     // },4000)
+    alert("please fill the data properly");
   }else{
     setIsAlbumLoading(true);
     const data={

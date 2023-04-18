@@ -27,6 +27,10 @@ app.use('/api/albums/',albumRoutes);
 const songRoutes=require('./routes/songs');
 app.use("/api/songs/",songRoutes);
 
+//chatRoute
+const chatRoute=require('./routes/chat');
+app.use('/api/chats/',chatRoute);
+
 mongoose.connect("mongodb+srv://admin:admin@cluster0.syha3im.mongodb.net/?retryWrites=true&w=majority",{useNewUrlParser:true});
 mongoose.connection
 .once('open',()=>console.log("Connected"))

@@ -1,6 +1,7 @@
 export {default as Login} from './Login';
 export {default as Home} from './Home';
 export {default as Header} from './Header'
+export {default as Premium} from './Premium'
 
 //components of dashboard
 export {default as Dashboard} from './Dashboard';
@@ -15,9 +16,16 @@ export {default as FilterButtons} from './FilterButtons'
 
 export {default as Alert} from './Alert'
 
-export {default as MusicPlayer} from './MusicPlayer'
+export {default as MusicPlayer} from './MusicPlayer';
+
+export {default  as ContactUs} from './ContactUs';
 
 
 //home for user
 export {default as UserProfile} from './UserProfile'
 export {default as Filter} from './Filter'
+
+
+//for chat message
+export {default as ChatMessage} from './ChatMessage';
+export {default as AllMessages} from './AllMessages'

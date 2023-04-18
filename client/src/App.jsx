@@ -2,7 +2,7 @@
 import './App.css'
 import React, {useEffect,useState} from 'react';
 import { Route, Routes, useNavigate } from 'react-router-dom'
-import { Dashboard, Home, Login, MusicPlayer, UserProfile} from './component'
+import { ChatMessage, ContactUs, Dashboard, Home, Login, MusicPlayer, Premium, UserProfile} from './component'
 
 import {app} from './config/firebase.config'
 import {browserSessionPersistence, getAuth, setPersistence, signInWithEmailAndPassword} from 'firebase/auth';
@@ -52,12 +52,15 @@ function App() {
   },[])
   return (
     <AnimatePresence mode="wait">
-    <div className="h-auto min-w-[680px] bg-primary flex justify-center items-center">
+    <div className="h-auto min-w-[680px] flex justify-center items-center">
      <Routes>
       <Route path='/login' element={<Login setAuth={setAuth}/>} />
       <Route path='/*' element={<Home/>} />
       <Route path='/dashboard/*' element={<Dashboard/>}/>
       <Route path='/userProfile' element={<UserProfile/>}/>
+      <Route path='/chat' element={<ChatMessage/>}/>
+      <Route path='/contact' element={<ContactUs/>}/>
+      <Route path='/premium' element={<Premium/>}/>
      </Routes>
 
      
